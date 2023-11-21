@@ -4,7 +4,7 @@
 # use the persisting Model
 
 
-##      Part 1    ##
+#     Part 1    ##
 # import pandas as pd
 # from sklearn.tree import DecisionTreeClassifier
 #
@@ -22,7 +22,7 @@
 # print(predictions)
 
 
-##      Part 2      ##
+# #      Part 2      # #
 # # Imports all the needed Libraries
 # import pandas as pd
 # from sklearn.tree import DecisionTreeClassifier
@@ -71,7 +71,7 @@
 # print("Random Forest accuracy =", RF_score*100, "%")
 
 
-##      Part 3      ##
+# #      Part 3      # #
 # # Import Libraries
 # import pandas as pd
 # from sklearn import svm
@@ -89,22 +89,18 @@
 # # Create a Persisting Model
 # joblib.dump(model, 'grade-recommender.joblib')
 
-##      Part 4      ##
+# #      Part 4      # #
 
 # Import Libraries
-import pandas as pd
-from sklearn import svm
 import joblib
 
 # User Inputs
 Quiz = int(input("Enter Quiz Marks :"))
 Assgn = input("Enter Assignment Marks: ")
-Mid = int(input ("Enter Mid Exam Marks Marks :"))
+Mid = int(input("Enter Mid Exam Marks Marks :"))
 Final = input("Enter Final Exam Marks: ")
 
 # Predict from the created model
 model = joblib.load('grade-recommender.joblib')
 predictions = model.predict([[Quiz, Assgn, Mid, Final]])
 print("The Grade you will obtain is:", predictions)
-
-
